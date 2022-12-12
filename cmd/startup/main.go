@@ -1,12 +1,9 @@
 package main
 
 import (
-	fmt"
-	os/exec"
+	"github.com/aizamjj/tbd/pkg/gh"
 )
 
 func main() {
-	cmd := exec.Command("tmux", "bind-key", "T", "run-shell", "echo 'hello'")
-	cmd.Start()
-	fmt.Println("hello world")
+	gh.GetRepos()
 }
